@@ -1,0 +1,23 @@
+/* Empty. Add your own CSS if you like */
+.removeBar {
+  border: none !important;
+}
+
+.backgroundContent {
+  background-image: url("http://www.traemcneely.com/wp-content/uploads/2011/08/wpid-000010801.jpg");
+  background-color: #cccccc;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.marginTop-100 {
+    margin-top: 100px;
+}
+
+.margin-0 {
+  margin: 0px!important;
+}
+
+.padding-10 {
+  padding: 10px;
+}
