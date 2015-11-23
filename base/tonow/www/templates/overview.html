@@ -1,7 +1,24 @@
-<ion-content>
-  <div class="card">
-    <div class="item item-text-wrap">
-      {{variable}}
-    </div>
-  </div>
-</ion-content>
+<ion-view name="overview-page" view-title="ToNow - Today" class="overview-page">
+  <ion-content scroll="false">
+    <ion-slide-box>
+        <ion-slide ng-repeat="card in cards">
+          <div class="list card current-day" ng-class="{past: past == true, future: past == false}" ng-show="!hide">
+
+            <div class="title">
+              <h3>{{ card.title }}</h3>
+            </div>
+
+            <div class="item content">
+              <ion-list>
+                <ion-item ng-repeat="task in card.tasks">
+                  {{task}}
+                </ion-item>
+              </ion-list>
+            </div>
+
+          </div>
+        </ion-slide>
+
+    </ion-slide-box>
+  </ion-content>
+</ion-view>

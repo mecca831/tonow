@@ -1,1 +1,47 @@
 /* Empty. Add your own CSS if you like */
+
+.overview-page .current-day .content {
+  height: 400px;
+  overflow:hidden;
+}
+
+.overview-page .current-day .title {
+      text-align: center;
+}
+
+.overview-page .current-day {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+
+  -webkit-transition:all cubic-bezier(0.420, 0.000, 1.000, 1.000) 0.1s;
+  transition:all cubic-bezier(0.420, 0.000, 1.000, 1.000) 0.1s;
+}
+
+.overview-page .current-day.future.ng-hide {
+  -webkit-transform: translateX(1000px) rotate(0deg);
+  -ms-transform: translateX(1000px) rotate(0deg);
+  transform: translateX(1000px) rotate(0deg);
+  opacity:0;
+}
+
+.overview-page .current-day.past.ng-hide {
+  -webkit-transform: translateX(-1000px) rotate(0deg);
+  -ms-transform: translateX(-1000px) rotate(0deg);
+  transform: translateX(-1000px) rotate(0deg);
+  opacity:0;
+}
+
+.overview-page .current-day.ng-hide-add {
+  -webkit-transition:all cubic-bezier(0.420, 0.000, 1.000, 1.000) 0.3s;
+  transition:all cubic-bezier(0.420, 0.000, 1.000, 1.000) 0.3s;
+  display:block!important;
+}
+
+.overview-page .current-day.ng-hide-remove {
+  -webkit-transform: scale(0.7) translateX(0px) rotate(0deg);
+  -ms-transform: scale(0.7) translateX(0px) rotate(0deg);
+  transform: scale(0.7) translateX(0px) rotate(0deg);
+  opacity: 0;
+}
