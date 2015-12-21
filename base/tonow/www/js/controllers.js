@@ -7,14 +7,29 @@ angular.module('tonow.controllers', ['ionic'])
   $scope.tasks = ["Clean bathroom", "Make bread", "Something w/ someone"];
   $scope.cards = [
     {
+      "day": "Yesterday",
+      "title": "This is yesterday",
+      "tasks": [
+        {"text": "Doing the dishes", "state": 1},
+        {"text": "Shower less", "state": 0}
+      ]
+    },
+    {
       "day": "Today",
       "title": "This is today",
-      "tasks": ["Clean bathroom", "Make bread", "Something w/ someone"]
+      "tasks": [
+        {"text": "Clean bathroom", "state": 0},
+        {"text": "Make bread", "state": 1},
+        {"text": "Something w/ someone", "state": 0}
+      ]
     },
     {
       "day": "Tomorrow",
       "title": "This is tomorrow",
-      "tasks": ["Buy car wipes", "Shower"]
+      "tasks": [
+        {"text": "Buy car wipes", "state": 1},
+        {"text": "Shower", "state": 0}
+      ]
     }
   ];
 
