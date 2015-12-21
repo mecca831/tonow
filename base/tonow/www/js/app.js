@@ -7,6 +7,12 @@ angular.module('tonow', ['ionic', 'ksSwiper', 'tonow.controllers'])
 
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
+  .state('login', {
+    url: '/login',
+    templateUrl: 'templates/login.html',
+    controller: 'LoginCtrl'
+  })
+
   .state('overview', {
     url: '/overview',
     templateUrl: 'templates/overview.html',
@@ -19,7 +25,7 @@ angular.module('tonow', ['ionic', 'ksSwiper', 'tonow.controllers'])
     controller: 'TaskCtrl'
   });
 
-  $urlRouterProvider.otherwise("overview");
+  $urlRouterProvider.otherwise("login");
 })
 
 .run(function($ionicPlatform) {
@@ -32,5 +38,6 @@ angular.module('tonow', ['ionic', 'ksSwiper', 'tonow.controllers'])
     if(window.StatusBar) {
       StatusBar.styleDefault();
     }
+
   });
 })

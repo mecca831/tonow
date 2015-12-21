@@ -54,3 +54,19 @@ angular.module('tonow.controllers', ['ionic'])
   $scope.tasks = ["Clean bathroom", "Make bread", "Something w/ someone"];
   
 })
+
+.controller('LoginCtrl', function($scope, $state) {
+  console.log('LoginCtrl');
+  $scope.tasks = ["Clean bathroom", "Make bread", "Something w/ someone"];
+
+  $scope.login = function(username, password) {
+    console.log(username + password);
+    if (username == 'test' && password == 'test') {
+      // authentication
+      $state.go('overview');
+    } else {
+      $state.go('login');
+    }
+  };
+  
+})
