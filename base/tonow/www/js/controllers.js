@@ -1,6 +1,6 @@
 angular.module('tonow.controllers', ['ionic'])
 
-.controller('OverviewCtrl', function($scope, $timeout) {
+.controller('OverviewCtrl', function($scope, $state) {
   console.log('OverviewCtrl Executed');
   $scope.hide = false;
   $scope.variable = "Today";
@@ -33,6 +33,11 @@ angular.module('tonow.controllers', ['ionic'])
     }
   ];
 
+  $scope.addTask = function() {
+    console.log('addTask');
+    $state.go('task');
+  };
+
   // $scope.go = function(direction) {
   //       $scope.hide = true;
   //       $scope.past = (direction > 0);
@@ -42,4 +47,10 @@ angular.module('tonow.controllers', ['ionic'])
   //         $scope.hide = false;
   //       }, 150);
   // }
+})
+
+.controller('TaskCtrl', function($scope) {
+  console.log('TaskCtrl');
+  $scope.tasks = ["Clean bathroom", "Make bread", "Something w/ someone"];
+  
 })

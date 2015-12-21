@@ -11,6 +11,12 @@ angular.module('tonow', ['ionic', 'ksSwiper', 'tonow.controllers'])
     url: '/overview',
     templateUrl: 'templates/overview.html',
     controller: 'OverviewCtrl'
+  })
+
+  .state('task', {
+    url: '/task',
+    templateUrl: 'templates/task.html',
+    controller: 'TaskCtrl'
   });
 
   $urlRouterProvider.otherwise("overview");

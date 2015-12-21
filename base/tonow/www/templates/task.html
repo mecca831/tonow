@@ -1,0 +1,15 @@
+<ion-view name="task-page" view-title="ToNow - Today" class="overview-page">
+  <ion-content scroll="false">
+          <div class="list card current-day" ng-class="{past: past == true, future: past == false}" ng-show="!hide">
+
+            <div class="item content">
+              <ion-list>
+                <ion-item ng-repeat="task in tasks">
+                  {{task}}
+                </ion-item>
+              </ion-list>
+            </div>
+
+          </div>
+  </ion-content>
+</ion-view>

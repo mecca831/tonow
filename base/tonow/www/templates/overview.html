@@ -30,7 +30,7 @@
       pagination-clickable="false"
       override-parameters="{effect: 'coverflow',coverflow: {rotate: 50,stretch: 0,depth: 100,modifier: 1,slideShadows : false}}">
       <ks-swiper-slide class="swiper-slide" ng-repeat="card in cards">
-        <div class="list card current-day" ng-class="{past: past == true, future: past == false}" ng-show="!hide">
+        <div class="list card current-day" ng-class="{past: past == true, future: past == false}" ng-show="!hide" ng-click="addTask()">
 
           <div class="title">
             <h3>{{ card.title }}</h3>
@@ -49,3 +49,7 @@
     </ks-swiper-container>
   </ion-content>
 </ion-view>
+    <div class="bar bar-footer">
+      <div class="title button button-clear button-dark icon ion-plus-circled"></div>
+      <div class="button button-clear button-dark icon ion-ios-search-strong"></div>
+    </div>
