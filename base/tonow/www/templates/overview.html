@@ -1,27 +1,7 @@
 <ion-view name="overview-page" view-title="ToNow - Today" class="overview-page">
   <ion-content scroll="false">
-    <!-- <ion-slide-box>
-        <ion-slide ng-repeat="card in cards">
-          <div class="list card current-day" ng-class="{past: past == true, future: past == false}" ng-show="!hide">
-
-            <div class="title">
-              <h3>{{ card.title }}</h3>
-            </div>
-
-            <div class="item content">
-              <ion-list>
-                <ion-item ng-repeat="task in card.tasks">
-                  <ion-checkbox ng-checked="task.state == 1" ng-disabled="true">{{task.text}}</ion-checkbox>
-                </ion-item>
-              </ion-list>
-            </div>
-
-          </div>
-        </ion-slide>
-
-    </ion-slide-box> -->
     <ks-swiper-container
-      initial-slide="1"
+      initial-slide="3"
       speed="2000"
       loop="false"
       show-nav-buttons="true"
