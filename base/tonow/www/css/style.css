@@ -1,4 +1,4 @@
-/* Empty. Add your own CSS if you like */
+/* CSS ToNow */
 
 .overview-page .current-day .content {
   height: 400px;
@@ -6,8 +6,8 @@
 }
 
 .overview-page .current-day .title {
-      text-align: center;
-      margin-top: 5px;
+  text-align: center;
+  margin-top: 5px;
 }
 
 .overview-page .current-day {

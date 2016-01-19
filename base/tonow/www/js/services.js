@@ -65,4 +65,27 @@ angular.module('tonow.services', ['ionic'])
           ];
         }
     }
+})
+
+.factory('LoginService', function () {
+  return {
+      performLogin: function(username, password) {
+          authObj = {
+            "result": false,
+            "lastLogin": ""
+          }
+          // Query DB
+          userObj = {
+            "username": username,
+            "password": "test"
+          }
+          //
+
+          if (userObj && password == userObj.password) {
+            authObj.result = true;
+          }
+
+          return authObj;
+      }
+  }
 });

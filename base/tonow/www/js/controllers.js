@@ -9,11 +9,16 @@ angular.module('tonow.controllers', ['ionic', 'tonow.services'])
   $scope.cards = cards
   $scope.numCards = cards.length
 
+  $scope.goTask = function(num) {
+      $state.go('task', { number: num });
+  };
 
   $scope.addTask = function() {
     console.log('addTask');
     $state.go('task');
   };
+
+
 
   // $scope.go = function(direction) {
   //       $scope.hide = true;
@@ -26,20 +31,22 @@ angular.module('tonow.controllers', ['ionic', 'tonow.services'])
   // }
 })
 
-.controller('TaskCtrl', function($scope) {
-  console.log('TaskCtrl');
-  $scope.tasks = ["Clean bathroom", "Make bread", "Something w/ someone"];
-
+.controller('TaskCtrl', function($scope, $stateParams, OverviewService) {
+  console.log('TaskCtrl: '+$scope);
+  console.log('TaskCtrl: '+$stateParams.number);
+  cards = OverviewService.getNotes();
+  console.log('cards: '+cards[$stateParams.number].tasks);
+  $scope.card = cards[$stateParams.number];
 })
 
-.controller('LoginCtrl', function($scope, $state) {
+.controller('LoginCtrl', function($scope, $state, LoginService) {
   console.log('LoginCtrl');
-  $scope.tasks = ["Clean bathroom", "Make bread", "Something w/ someone"];
 
   $scope.login = function(username, password) {
     console.log(username + password);
-    if (username == 'test' && password == 'test') {
-      // authentication
+    // authentication
+    auth = LoginService.performLogin(username, password);
+    if (auth.result == true) {
       $state.go('overview');
     } else {
       $state.go('login');
