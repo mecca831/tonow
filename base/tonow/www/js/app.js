@@ -21,6 +21,7 @@ angular.module('tonow', ['ionic', 'ksSwiper', 'tonow.controllers'])
 
   .state('task', {
     url: '/task',
+    params: {"number": null},
     templateUrl: 'templates/task.html',
     controller: 'TaskCtrl'
   });
